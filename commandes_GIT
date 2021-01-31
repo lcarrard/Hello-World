@@ -1,0 +1,24 @@
+# Créer un directory
+mkdir git_workspace
+cd git_workspace  #important de positionner dans le répertoire
+
+# ramener les sources de github dans git_workspace
+git clone https.... # récupérer le lien dans githb dans Code (bouton vert)
+
+# Comment rajouter une nouvelle source dans le folder
+touch Hello-World.py
+
+# Comparer avec github
+git status
+
+# Rajouter un programme dans github
+git add Hello-World
+
+# faire un commit du programme
+git commit -m "ceci est le commentaire du commit" Hello-Word.py
+
+
+# Pousser les changements sur la branche master
+git push -u origin master
+  #User
+  #Mot de passe
