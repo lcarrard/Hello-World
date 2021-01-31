@@ -1,1 +1,1 @@
-Print("Hello World for my first comit with github")
+Print("Hello World for my first commit with github")
