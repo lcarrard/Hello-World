@@ -1,0 +1,20 @@
+pip install Flask
+pip install -U Flask-WTF
+pip install Flask-SQLAlchemy
+
+
+
+python3
+# ne marche pas au moment du commit car la table Task n'est pas créée
+>>>from app import db
+
+
+>>> from models import db
+>>>db.create_all()
+>>>from models import Task
+>>>from datetime import datetime
+>>>t = Task(title='abc', date=datetime.utcnow())
+>>>t
+>>>db.session.add(t)
+>>>db.session.commit()
+>>>

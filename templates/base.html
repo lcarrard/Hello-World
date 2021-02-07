@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To do list</title>
+    <br>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-primary">
+                {{ message }}
+              </div>
+            {% endfor %}
+        {% endif %}
+      {% endwith %}
+   <br>
+  </head>
+  <body>
+    <h1>{{current_title}}</h1>
+    <hr>
+    <ul>
+      <li><a href="{{ url_for('index')}}">Taks</a></li>
+      <li><a href="{{ url_for('add')}}">Add new</a></li>
+    </ul>
+    {% block main %}
+    {% endblock %}
+  </body>
+</html>

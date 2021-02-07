@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block main %}
+    <p>Are you sure you want ton delete the following task ?</p>
+    <form action="{{ url_for('delete', task_id=task_id) }}" method="post">
+      {{ form.csrf_token() }}
+      {{ title }}
+      {{ form.submit }}
+    </form>
+{% if ligne %}
+        <h1> {{ ligne }} </h1>
+{% endif %}
+{% endblock %}

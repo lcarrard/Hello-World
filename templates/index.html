@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main %}
+  {% for task in alltasks %}
+    <div class="card">
+      <div class="card-body">
+        <p>Activity : {{ task.title }}
+        Added on {{ task.date }}
+        <a href="{{ url_for('edit', task_id=task.id) }}">Edit</a>
+        <a href="{{ url_for('delete', task_id=task.id) }}">Delete</a>
+        </p>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
