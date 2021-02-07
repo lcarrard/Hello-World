@@ -10,4 +10,4 @@ db = SQLAlchemy(app)
 from routes import *   # rapporte l'ensemble du code dans routes-py
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host= '0.0.0.0')
